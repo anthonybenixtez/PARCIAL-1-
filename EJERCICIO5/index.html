@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js - Lista de Tareas</title>
+    <style>
+      body.modo-claro {
+        background-color: white;
+        color: black;
+      }
+    
+      body.modo-oscuro {
+        background-color: #2c3e50;
+        color: white;
+      }
+    
+      .mode-toggle-button {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    
+      .mode-toggle-button.dark-mode {
+        background-color: #555;
+      }
+    </style>
+    
+</head>
+<body>
+
+  <div id="app">
+    <button class="mode-toggle-button" @click="DesplegarDarkMode">
+      Cambiar a {{ modoOscuro ? 'Modo Claro' : 'Modo Oscuro' }}
+    </button>
+
+    <h1>Listado de Tareas</h1>
+    <input v-model="nuevaTarea" placeholder="Agregar una nueva tarea">
+    <button @click="addTarea">Agregar una Tarea</button>
+  
+    <ul>
+      <li v-for="(tarea, index) in tareas" :key="index">
+        {{ tarea }}
+        <button @click="borrarTareas(index)">Borrar</button>
+      </li>
+    </ul>
+  </div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./app.js"></script>
+
+</body>
+</html>
+
+
+
+    
+</body>

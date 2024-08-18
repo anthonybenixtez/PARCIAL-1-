@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js - Alerta de Cambio</title>
+</head>
+<body>
+
+  <div id="app">
+    <input v-model="valor" placeholder="Escribe algo" />
+    <alerta-cambio :valor="valor"></alerta-cambio>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

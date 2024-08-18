@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js - Mensaje Condicional</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+</head>
+<body>
+  <div id="app">
+    <input type="number" v-model="numero" placeholder="Ingresa un número" />
+    <mensaje-condicional :numero="numero"></mensaje-condicional>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
